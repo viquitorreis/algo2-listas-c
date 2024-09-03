@@ -11,11 +11,13 @@ int main() {
     colaborador = (struct funcionario *) malloc(sizeof(struct funcionario));
 
     printf("Digite o nome do colaborador: ");
-    scanf("%s", colaborador->nome);
+    scanf("%s", &colaborador->nome);
     printf("Digite o salário do colaborador:" );
-    scanf("%f", colaborador->salario);
-
-    free(colaborador);
+    scanf("%f", &colaborador->salario);
 
     printf("Nome: %s, Salário: %f\n", colaborador->nome, colaborador->salario);
+    
+    free(colaborador);
+
+    return 0;
 }
